@@ -1,0 +1,2540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- font for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap" rel="stylesheet">
+
+    <!-- owlcarousel links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav {
+            padding: 20px 0px;
+        }
+
+        .logo {
+            text-align: center;
+        }
+        .logo img{
+            height: 60px;
+        }
+
+        .icons {
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .icons .fa-bars {
+            font-size: 25px;
+            padding-left: 50px;
+        }
+
+        .smallhead{
+            font-family: "Playwrite BE VLG", cursive;
+            color: #1bbc9b;
+            font-weight: 900;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="container-fluid">
+        <div class="row nav" style="margin: 0;">
+            <div class="col-3 logo ">
+                <img src="../Wisdom-Overseas-logo-1-1.webp" alt="">
+            </div>
+            <div class="col-8 icon">
+                <div class="icons">
+                    <p>Mahajan Complex, Saili Road, Pathankot-145001</p>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .vertical-menu {
+            transform: rotate(180deg);
+            writing-mode: vertical-rl;
+            text-orientation: sideways;
+            display: flex;
+            justify-content: flex-start;
+            align-items: last baseline;
+            padding: 0;
+        }
+
+        .vertical-menu li {
+            list-style: none;
+            margin: 20px 0;
+            font-size: 17px;
+        }
+
+        .vertical-menu li a {
+            text-decoration: none;
+            color: #2b3841fc;
+        }
+
+        
+        .navlinks {
+            width: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: white;
+            color: black;
+            height: 100%;
+        }
+
+        .bread {
+            display: flex;
+            height: 600px;
+            position: relative;
+            background-color: #2b38417a;
+
+        }
+
+        .bread::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://cdn.profile.ru/wp-content/uploads/2022/01/Viza-pereezd-v-Velikobritaniju-flag-karta.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .vertical-menu>li:nth-child(3) {
+            position: relative;
+            padding: 0px 20px;
+        }
+
+        .vertical-menu>li:nth-child(4) {
+            position: relative;
+            padding: 0px 20px;
+        }
+
+        .vertical-menu>li:nth-child(5) {
+            position: relative;
+            padding: 0px 20px;
+        }
+
+
+        .vertical-menu>li:nth-child(3):hover .coaches {
+            display: block;
+        }
+
+        .vertical-menu>li:nth-child(4):hover .coaches {
+            display: block;
+        }
+
+        .vertical-menu>li:nth-child(5):hover .coaches {
+            display: block;
+        }
+
+        .coaches {
+            padding: 30px;
+            /* height: 100px; */
+            width: 300px;
+            background-color: #2f7096;
+            position: absolute;
+            writing-mode: horizontal-tb;
+            transform: rotate(-180deg) translateY(35%);
+            display: none;
+            right: 60px;
+            opacity: 0;
+            animation-name: hello;
+            animation-duration: 0.9s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes hello {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .country {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .dropdowns {
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdowns li {
+            padding: 0;
+            margin: 0;
+            line-height: 35px;
+        }
+
+        .dropdowns li a {
+            color: white;
+        }
+
+        .dropdowns li a:hover {
+            color: red;
+        }
+
+        .detail {
+            background-color: #2f7096db;
+            color: white;
+            padding: 40px;
+            margin: 60px;
+            /* height: 350px; */
+        }
+
+        .detail h1 {
+            margin-bottom: 30px;
+            font-size: 60px;
+        }
+
+        .detail p {
+            font-size: 20px;
+        }
+    </style>
+    <!-- section 1 -->
+    <div class="container-fluid">
+        <div class="row" style="margin: 0;">
+            <div class="col-lg-12 bread" style=" padding: 0;">
+                <div class="navlinks" style="padding: 0;">
+                    <ul class="vertical-menu">
+                        <li><a href="">Home</a>
+                        </li>
+                        <li><a href="">About</a>
+                        </li>
+                        <li><a href="">Coachings</a>
+                            <div class="coaches">
+                                <ul class="dropdowns">
+                                    <li><a href="">IELTS</a> </li>
+                                    <li><a href="">PTE</a> </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="">Services</a>
+                            <div class="coaches">
+                                <ul class="dropdowns">
+                                    <li><a href="">Study Visa</a> </li>
+                                    <li><a href="">Visitor Visa</a> </li>
+                                    <li><a href="">Tourist Visa</a></li>
+                                    <li><a href="">Spouse Visa</a> </li>
+                                    <li><a href="">Open Work Permit </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="">Country</a>
+                            <div class="coaches">
+                                <div class="country">
+                                    <ul class="dropdowns">
+                                        <li><a href="">Austalia </a></li>
+                                        <li><a href="">United States</a> </li>
+                                        <li><a href="">United Kingdom</a> </li>
+                                        <li><a href="">Canada</a> </li>
+                                        <li><a href="">Germany</a> </li>
+                                    </ul>
+                                    <ul class="dropdowns">
+                                        <li><a href="">Malta </a></li>
+                                        <li><a href="">Russia</a> </li>
+                                        <li><a href="">Singapore</a> </li>
+                                        <li><a href="">Cyprus</a> </li>
+                                        <li><a href="">Mauritius</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="detail">
+                    <h1>Welcome to <br> Wisdom Overseas</h1>
+                    <p>Your trusted partner for hassle-free visa applications and immigration services. <br> We help you
+                        navigate through the complexities of visa processes with ease and confidence.</p>
+                </div>
+
+                <style>
+                    .textcircle {
+                        animation-name: circle;
+                        animation-duration: 5s;
+                        animation-iteration-count: infinite;
+                        animation-timing-function: linear;
+                    }
+
+                    @keyframes circle {
+                        from {
+                            transform: rotate(0deg);
+                        }
+
+                        to {
+                            transform: rotate(360deg);
+                        }
+                    }
+                </style>
+
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        .cntainer{
+            padding-bottom: 100px;
+            
+        }
+        .image1{
+            height: 100%;
+            width: 100%;
+            background-color: #2b38418b;
+            position: relative;
+            border-radius: 10px;
+            transition: all 0.5s ease;
+        }
+        .image1::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url(https://img.freepik.com/free-photo/young-woman-graduation-ceremony-pointing-her-diploma_23-2148505269.jpg?t=st=1721150282~exp=1721153882~hmac=9da7df6ee29ffae7379838ad115c9a3135d3b08bd64626d8c7c5834ede7cf1bb&w=740);
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            z-index: -1;
+        }
+        .aboutsection{
+            padding: 100px 0px;
+        }
+        .aboutss{
+            height: 400px;
+            margin-bottom: 20px;
+        }
+
+        .image1:hover{
+            background-color: #2b3841;
+            box-shadow: 5px 5px 15px #2b3841;
+            
+        }
+        .image1:hover .textss{
+            opacity: 0;
+        }
+        .image1:hover .textss2{
+            opacity: 1;
+        }
+        .image2:hover{
+            background-color: #2b3841;
+            box-shadow: 5px 5px 15px #2b3841;
+        }
+        .image2:hover .textss{
+            opacity: 0;
+        }
+        .image2:hover .textss2{
+            opacity: 1;
+        }
+        .image3:hover{
+            background-color: #2b3841;
+            box-shadow: 5px 5px 15px #2b3841;
+        }
+        .image3:hover .textss{
+            opacity: 0;
+        }
+        .image3:hover .textss2{
+            opacity: 1;
+        }
+        .image4:hover{
+            background-color: #2b3841;
+            box-shadow: 5px 5px 15px #2b3841;
+        }
+        .image4:hover .textss{
+            opacity: 0;
+        }
+        .image4:hover .textss2{
+            opacity: 1;
+        }
+        .textss{
+            padding: 10px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            color: white;
+            text-align: center;
+            transition: all 0.5s ease;
+            position: relative;
+        }
+        .textss2{
+            padding: 10px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            transition: all 0.5s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        
+        
+        .image2{
+            height: 100%;
+            width: 100%;
+            background-color: #2b38418b;
+            position: relative;
+            border-radius: 10px;
+            transition: all 0.5s ease;
+        }
+        .image2::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url(https://tumagazin.rs/wp-content/uploads/2021/02/iStock-175691840-2048x1365.jpg);
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            z-index: -1;
+        }
+
+        .image3{
+            height: 100%;
+            width: 100%;
+            background-color: #2b38418b;
+            position: relative;
+            border-radius: 10px;
+            transition: all 0.5s ease;
+        }
+
+        .image3::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url(https://img.freepik.com/free-photo/medium-shot-smiley-couple-with-phone_23-2149272134.jpg?t=st=1721150719~exp=1721154319~hmac=00cc8491c4aa6b31b9cc1f10092d1bf19479ea1fc4ec023f7a50af39d67d3be4&w=1060);
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            z-index: -1;
+        }
+        .image4{
+            height: 100%;
+            width: 100%;
+            background-color: #2b38418b;
+            position: relative;
+            border-radius: 10px;
+            transition: all 0.5s ease;        
+        }
+        .image4::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url(https://www.themigrationfirm.com/wp-content/uploads/2020/03/shutterstock_318171632.jpg);
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            z-index: -1;
+        }
+        .service{
+            margin: 20px 0px;
+        }
+    </style>
+
+    <style>
+        *{  
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 30px;
+}
+
+p{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+/* navigation part */
+.nav{
+    padding: 20px 0px;
+}
+
+.logo{
+    text-align: center;
+}
+
+.icons{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icons .fa-bars{
+    font-size: 25px;
+    padding-left: 50px;
+}
+.vertical-menu {
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    display: flex;
+    justify-content: flex-start;
+    align-items: last baseline;
+    padding: 0;
+}
+.vertical-menu li {
+    list-style: none;
+    margin: 20px 0;
+    font-size: 17px;
+}
+
+.vertical-menu li a{
+    text-decoration: none;
+    color: #2b3841fc;
+}
+
+.navlinks {
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+    color: black;
+    height: 100%;
+}
+.bread{
+    display: flex;
+    height: 600px;
+    position: relative;
+    background-color: #2b3841af;
+    
+}
+.bread::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://cdn.profile.ru/wp-content/uploads/2022/01/Viza-pereezd-v-Velikobritaniju-flag-karta.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: -1;
+}
+
+.vertical-menu > li:nth-child(3){
+    position: relative;
+    padding: 0px 20px;
+}
+.vertical-menu > li:nth-child(4){
+    position: relative;
+    padding: 0px 20px;
+}
+.vertical-menu > li:nth-child(5){
+    position: relative;
+    padding: 0px 20px;
+}
+
+
+.vertical-menu > li:nth-child(3):hover .coaches{
+    display: block;
+}
+
+.vertical-menu > li:nth-child(4):hover .coaches{
+    display: block;
+}
+.vertical-menu > li:nth-child(5):hover .coaches{
+    display: block;
+}
+
+.coaches{
+    padding: 30px;
+    /* height: 100px; */
+    width: 300px;
+    background-color: #2f7096;
+    position: absolute;
+    writing-mode: horizontal-tb;
+    transform: rotate(-180deg) translateY(35%);
+    display: none;
+    right: 60px;
+    opacity: 0;
+    animation-name: hello;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hello{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.country{
+    display: flex;
+    justify-content: space-around;
+}
+
+.dropdowns{
+    padding: 0;
+    margin: 0;
+}
+
+.dropdowns li{
+    padding: 0;
+    margin: 0;
+    line-height: 35px;
+}
+.dropdowns li a{
+    color: white;
+}
+
+.dropdowns li a:hover{
+    color: red;
+}
+
+.detail{
+    background-color: #2f7096db;
+    color: white;
+    padding: 40px;
+    margin: 60px;
+    /* height: 350px; */
+}
+.detail h1{
+    margin-bottom: 30px;
+    font-size: 60px;
+    filter: brightness(10px);
+}
+.detail p{
+    font-size: 20px;
+}
+.textcircle{
+    animation-name: circle;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes circle{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+/* services part */
+
+
+    </style>
+
+       <!-- services part -->
+<!-- <div class="container photo">
+    <div class="row">
+    <div class="col-lg-6 service-text">
+    <p>Services</p>
+    <h1>Your Trusted Partner for International Education & Visas</h1>
+    <p>Welcome to Wisdom Overseas, your expert partner for international education and visa services. Let us guide you from course selection to visa acquisition, ensuring your journey abroad is smooth and successful.</p>
+    </div>
+    <div class="col-lg-6 service-text">
+       <div class="circle">
+          <svg class="textcircle" viewBox="0 0 500 500" style="height: 200px; width:
+          200px;">
+              <defs>
+                  <path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z">
+                  </path>
+              </defs>
+              <text>
+                  <textPath xlink:href="#textcircle" textLength="900" style="font-size: 50px; font-weight: 500;"> 10 years of experience </textPath>
+              </text>
+          </svg> 
+        </div>
+    </div>
+    </div>
+  <div class="row subphoto">
+    <div class="col-lg-3 one">
+     <div class="box1">
+        <h2>Study Visa</h2> 
+        <p> Embarking on a journey of higher education in a foreign country</p>
+        <button class="button1">More Info</button>
+     </div>
+    </div>
+    <div class="col-lg-3 two">
+     <div class="box2">
+        <h2> Tourist Visa</h2>
+        <p> Embarking on a journey to explore the world is a dream shared by many,</p>
+         <button class="button2">More Info</button>
+     </div>
+    </div>
+    <div class="col-lg-3 three">
+     <div class="box3">
+        <h2> Spouse Visa</h2>
+        <p>Love knows no borders, and at Wisdom Overseas, we understand</p> 
+        <button class="button3">More Info</button>
+     </div>
+    </div>
+    <div class="col-lg-3 four">
+     <div class="box4">
+       <h2> Visitor Visa</h2>
+        <p> Embarking on an international journey is a thrilling endeavor</p>
+        <button  class="button4">More Info</button>
+     </div>
+    </div>
+  </div>
+ </div> -->
+
+    <div class="container-fluid cntainer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 aboutsection">
+                    <p class="smallhead">Our Services</p>
+                    <h2 class="service">WE ARE HERE WITH BEST VISA EXPERTS</h2>
+                    <p>At Wisdom Overseas, we provide comprehensive support to help you achieve your educational dreams.
+                         From personalized counseling and university admissions to expert visa assistance and test preparation, 
+                         we ensure you're well-prepared for your journey. Our pre-departure support ensures a smooth transition to life abroad.</p>
+                </div>
+                <div class="col-lg-6" style="display: flex; justify-content: center; align-items: center;">
+                    <!-- <div class="circle">
+                        <svg class="textcircle" viewBox="0 0 500 500" style="height: 200px; width:
+                        200px;">
+                            <defs>
+                                <path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z">
+                                </path>
+                            </defs>
+                            <text>
+                                <textPath xlink:href="#textcircle" textLength="900" style="font-size: 50px; font-weight: 500; opacity: 0.5"> 10 years of experience </textPath>
+                            </text>
+                        </svg> 
+                      </div> -->
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-lg-3 col-md-6 aboutss">
+                <div class="image1">
+                    <div class="textss">
+                        <h3>Student Visa</h3>
+                        <p>Embarking on a journey of higher education in a foreign country</p>
+                    </div>
+                    <div class="textss2">
+                        <h3>Student Visa</h3>
+                        <p>Embarking on a journey of higher education in a foreign country</p>
+                        <button>click here</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 aboutss">
+                <div class="image2">
+                    <div class="textss">
+                        <h3>Tourist Visa</h3>
+                        <p>Embarking on a journey to explore the world is a dream shared by many</p>
+                    </div>
+                    <div class="textss2">
+                        <h3>Tourist Visa</h3>
+                        <p>Embarking on a journey to explore the world is a dream shared by many</p>
+                        <button>click here</button>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 aboutss">
+                <div class="image3">
+                    <div class="textss">
+                        <h3>Spouse Visa</h3>
+                        <p>Love knows no borders, and at Wisdom Overseas, we understand</p>
+                    </div>
+                    <div class="textss2">
+                        <h3>Spouse Visa</h3>
+                        <p>Love knows no borders, and at Wisdom Overseas, we understand</p>
+                        <button>click here</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 aboutss">
+                <div class="image4">
+                    <div class="textss">
+                        <h3>Visitor Visa</h3>
+                        <p>Embarking on an international journey is a thrilling endeavor</p>
+                    </div>
+                    <div class="textss2">
+                        <h3>Visitor Visa</h3>
+                        <p>Embarking on an international journey is a thrilling endeavor</p>
+                        <button>click here</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <style>
+        h3{
+            font-size: 30px;
+        }
+        .missions{
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            background-color: #2b3841;
+            color: white;
+            transition: all 0.5s ease;
+            border-radius: 10px;
+
+        }
+        .mission{
+            transition: all 0.5s ease;
+        }
+        .missions:hover{
+            background-color: #2b384194;
+            box-shadow: 5px 5px 15px #2b3841;
+        }
+        .missions:hover .mission{
+            transform: skew(-20deg);
+        }
+        .missions::after {
+        position: absolute;
+        content: "01";
+        font-size: 80px;
+        right: 20px;
+        top: -10px;
+        color: rgba(0, 0, 0, 0);
+        -webkit-text-fill-color: rgba(255, 255, 255, 0);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #28282862;
+        font-weight: 700;
+        transition: 0.3s;
+}
+
+    .missions::before{
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-image: url(https://img.freepik.com/free-photo/people-analyzing-checking-finance-graphs-office_23-2150377183.jpg?t=st=1721279112~exp=1721282712~hmac=79e5a9eb22bf782be5b00af8fffbce7415158cd737db4799d95137c4e29eadd5&w=1060);
+        background-position: center;
+        background-size: cover;
+        top: 0px;
+        left: -100%;
+        z-index: -1;
+        transition: all 0.6s ease;
+    }
+    .missions:hover::before{
+        left: 0;
+    }
+    .missions:hover::after{
+        -webkit-text-stroke-color: #ffffff67;
+    }
+
+    .visions{
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+        background-color: #2b3841;
+        color: white;
+        transition: all 0.5s ease;
+        border-radius: 10px;
+    }
+    .vision{
+            transition: all 0.5s ease;
+        }
+        .visions:hover{
+            background-color: #2b384194;
+            box-shadow: 5px 5px 15px #2b3841;
+
+        }
+        .visions:hover .vision{
+            transform: skew(-20deg);
+        }
+    
+    .visions::after {
+        position: absolute;
+        content: "02";
+        font-size: 80px;
+        right: 20px;
+        top: -10px;
+        color: rgba(0, 0, 0, 0);
+        -webkit-text-fill-color: rgba(255, 255, 255, 0);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #28282862;
+        font-weight: 700;
+        transition: 0.3s;
+    }
+    .visions::before{
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-image: url(https://img.freepik.com/free-photo/corporate-workers-brainstorming-together_23-2148804566.jpg?t=st=1721279557~exp=1721283157~hmac=5e681b643bb2a8bc80fe85fe077f8d709c377f3b78ab2678c7987403b66b1680&w=1060);
+        background-size: cover;
+        background-position: center;
+        top: 0px;
+        left: -100%;
+        z-index: -1;
+        transition: all 0.6s ease;
+    }
+    .visions:hover::before{
+        left: 0;
+    }
+    .visions:hover::after{
+        -webkit-text-stroke-color: #ffffff67;
+    }
+
+    .totals{
+        font-size: 25px;
+        position: absolute; 
+        opacity: 0.8;
+    }
+
+    .values{
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+        background-color: #2b3841;
+        color: white;
+        transition: all 0.5s ease;
+        border-radius: 10px;
+    }
+
+    .value{
+            transition: all 0.5s ease;
+        }
+        .values:hover{
+            background-color: #2b384194;
+            box-shadow: 5px 5px 15px #2b3841;
+
+        }
+        .values:hover .value{
+            transform: skew(-20deg);
+        }
+    .values::after{
+        position: absolute;
+        content: "03";
+        font-size: 80px;
+        right: 20px;
+        top: -10px;
+        color: rgba(0, 0, 0, 0);
+        -webkit-text-fill-color: rgba(255, 255, 255, 0);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #28282862;
+        font-weight: 700;
+        transition: 0.3s;
+    }
+    .values::before{
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-image: url(https://img.freepik.com/free-photo/close-up-hands-holding-tickets_23-2149080810.jpg?t=st=1721279745~exp=1721283345~hmac=e457aa4ebfd04d85c3748cb8db61b1ed3c1fb33af4901f6d8d6b7c1138ae04fe&w=1060);
+        background-size: cover;
+        background-position: center;
+        top: 0px;
+        left: -100%;
+        z-index: -1;
+        transition: all 0.6s ease;
+    }
+    .values:hover::before{
+        left: 0;
+    }
+    .values:hover::after{
+        -webkit-text-stroke-color: #ffffff67;
+    }   
+    .circle{
+        border-radius: 50%;
+        margin: 20px 0px;
+        color: #1bbc98;
+        box-shadow: 2px 2px 0px #00000057;;
+    }
+
+    .textcircle{
+        height: 200px;
+        width: 200px;
+    }
+
+    .mission-vision{
+        padding: 150px 60px;
+    }
+    </style>
+
+
+
+    <div class="container-fluid" style="background-color: #ebeff3; position: relative; z-index: 1;" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 aboutsection">
+                    <p class="smallhead">About Us</p>
+                    <h2 class="service">WE ARE HERE WITH BEST VISA EXPERTS</h2>
+                    <p>At Wisdom Overseas, we provide comprehensive support to help you achieve your educational dreams.
+                        From personalized counseling and university admissions to expert visa assistance and test preparation, 
+                        we ensure you're well-prepared for your journey. Our pre-departure support ensures a smooth transition to life abroad.</p>
+                    <div class="row" style="padding: 0; margin: 0;">
+                        <div class="col-lg-6 col-md-6 col-6" style="display: flex; justify-content: center; align-items: center;">
+                            <div class="circle" style="position: relative; display: flex; justify-content: center; align-items: center;">
+                                <h2 class="totals">10 +</h2>
+                                <svg class="textcircle" viewBox="0 0 500 500">
+                                    <defs>
+                                        <path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z">
+                                        </path>
+                                    </defs>
+                                    <text>
+                                        <textPath xlink:href="#textcircle" textLength="900" style="font-size: 50px; font-weight: 500; opacity: 0.8">&#9679; Years Of Experience </textPath>
+                                    </text>
+                                </svg> 
+                              </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-6" style="display: flex; justify-content: center; align-items: center;">
+                            <div class="circle" style="position: relative; display: flex; justify-content: center; align-items: center;">
+                                <h2 class="totals">700 +</h2>
+                                <svg class="textcircle" viewBox="0 0 500 500">
+                                    <defs>
+                                        <path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z">
+                                        </path>
+                                    </defs>
+                                    <text>
+                                        <textPath xlink:href="#textcircle" textLength="900" style="font-size: 50px; font-weight: 500; opacity: 0.8">&#9679; Successful Visa Approved </textPath>
+                                    </text>
+                                </svg> 
+                              </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-6" style="display: flex; justify-content: center; align-items: center;">
+                            <div class="circle" style="position: relative; display: flex; justify-content: center; align-items: center;">
+                                <h2 class="totals">5K +</h2>
+                                <svg class="textcircle" viewBox="0 0 500 500">
+                                    <defs>
+                                        <path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z">
+                                        </path>
+                                    </defs>
+                                    <text>
+                                        <textPath xlink:href="#textcircle" textLength="900" style="font-size: 50px; font-weight: 500; opacity: 0.8">&#9679; Best IELTS/PTE Results </textPath>
+                                    </text>
+                                </svg> 
+                              </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-6" style="display: flex; justify-content: center; align-items: center;">
+                            <div class="circle" style="position: relative; display: flex; justify-content: center; align-items: center;">
+                                <h2 class="totals">7K +</h2>
+                                <svg class="textcircle" viewBox="0 0 500 500">
+                                    <defs>
+                                        <path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z">
+                                        </path>
+                                    </defs>
+                                    <text>
+                                        <textPath xlink:href="#textcircle" textLength="900" style="font-size: 50px; font-weight: 500; opacity: 0.8;">&#9679;  Happy Clients And Students </textPath>
+                                    </text>
+                                </svg> 
+                              </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-6 mission-vision">
+                    <div class="missions">
+                        <h3 class="mission">Our Mission</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed modi quae atque harum iusto, animi repudiandae, molestiae voluptates cumque consectetur ad rem deserunt unde ratione voluptate velit et amet aliquid!</p>
+                    </div>
+                    <div class="visions" style="margin: 20px 0px;">
+                        <h3 class="vision">Our Vision</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iure quis beatae recusandae magnam. Minus, quod accusamus quos voluptatem quisquam sit? Dolor repellendus itaque quasi, ipsa culpa est quisquam delectus.</p>
+                    </div>
+                    <div class="values">
+                        <h3 class="value">Our Values</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum a rem fugit commodi debitis, obcaecati, assumenda delectus ea illo, consequatur dolorum ducimus culpa deleniti accusamus quis quam reprehenderit odit minima!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+                            <!-- country -->
+    <style>
+
+        .bigimg{
+            position: relative;
+            height: 100%;
+            background-color: rgba(20, 20, 20, 0.7);
+            color: white;
+
+        }
+        .bigimg::before{
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(https://d6jxgaftxvagq.cloudfront.net/Pictures/1024x536/2/1/3/12213_visa_654911.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -2;
+        }
+        .countrys {
+    margin-top: 100px;
+}
+
+.owls{
+    padding-top: 100px;
+}
+
+
+
+.images1{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.img1{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://i.pinimg.com/originals/a5/8d/92/a58d9268341270fcbe90ed52a6f33ab0.jpg);
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+
+}
+.item:hover .img1{
+    transform: scale(1.3);
+}
+.count{
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.owl-dots{
+    display: none;  
+}
+.canada{
+    padding: 10px 15px;
+    border: none;
+    color:white;
+    background-color: #2b3841;
+    transition: all 0.2s ease-in-out;
+    
+}
+.canada:hover{
+   
+    
+    transform: translateY(-2px);
+}
+.owl-carousel{
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237. 1);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    padding: 20px;
+}
+
+.item h4 ,.canada{
+    margin-bottom: 20px;
+}
+.img2{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://img.freepik.com/free-photo/view-statue-liberty-new-york-city_23-2151279063.jpg?t=st=1721494628~exp=1721498228~hmac=aeab80c0b82fb5d3c317721c9555b893c9ef1057b9f2dc20f517f0e590063248&w=740 );
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+}
+.item:hover .img2{
+    transform: scale(1.3);
+}
+
+.img3{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://img.freepik.com/free-photo/beautiful-shot-sydney-harbor-bridge-with-light-pink-blue-sky_181624-16041.jpg?t=st=1721495697~exp=1721499297~hmac=2a424132b8b3b6bfb4b028abc14150828de3b21743d9908b9010abca58b0792f&w=1060 );
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+}
+.item:hover .img3{
+    transform: scale(1.3);
+}
+.img4{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://img.freepik.com/free-photo/tower-bridge-surrounded-by-buildings-lights-evening-london-uk_181624-13620.jpg?t=st=1721495857~exp=1721499457~hmac=d2dc35709edcea2daef34166eb7710e6dd8fc29f5c665f5c7b94c721e9bd98d9&w=1060    );
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+}
+.item:hover .img4{
+    transform: scale(1.3);
+}
+
+.img5{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://img.freepik.com/free-photo/clean-city-streets-prague_23-2149417744.jpg?t=st=1721495834~exp=1721499434~hmac=377d5e2cfa22c6a11fc2563e3320e08a19356e0e61f852db2f84eee9e905f0de&w=1060);
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+}
+.item:hover .img5{
+    transform: scale(1.3);
+}
+.img6{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://img.freepik.com/free-photo/magnificent-chophouse-captured-sliema-malta_181624-49531.jpg?t=st=1721496574~exp=1721500174~hmac=aaac4b109bfe174b326191b9ba8ac42579ee47357a11157e58c0ad5af797298f&w=1060);
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+}
+.item:hover .img6{
+    transform: scale(1.3);
+}
+.img7{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://img.freepik.com/free-photo/gorokhovets-winter-russia_1398-5222.jpg?t=st=1721497392~exp=1721500992~hmac=c51653ae2fe737a7d0c4dc752575d58d2ee50249fef08044eecfc1c0b04cabf3&w=1060);
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+}
+.item:hover .img7{
+    transform: scale(1.3);
+}
+.img8{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://img.freepik.com/free-photo/scenic-view-private-sandy-beach-with-sun-beds-parasokamy-sea-mountains-resort_146671-18829.jpg?t=st=1721496782~exp=1721500382~hmac=e33767590a27d9e1428a6b71c005bd8877758baad919d5464fc1234254afee8e&w=1060);
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+}
+.item:hover .img8{
+    transform: scale(1.3);
+}
+.img9{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://img.freepik.com/free-photo/large-buildings-connected-by-roof_1122-2176.jpg?t=st=1721496875~exp=1721500475~hmac=3abed83b92a0451f1c923fc6901b8b3a2bdd591921c3095810c6c0e29416a8e9&w=1060);
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+}
+.item:hover .img9{
+    transform: scale(1.3);
+}
+.img10{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://img.freepik.com/free-photo/beach-water-beautiful-leisure-health_1203-4902.jpg?t=st=1721497306~exp=1721500906~hmac=a2130ebd65f58b3e5951dbaba6814e0f3244b021ec5768324b439a8a70bf8212&w=1060);
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+}
+.item:hover .img10{
+    transform: scale(1.3);
+}
+
+    </style>
+<div class="container-fluid cntainer bigimg" >
+<div class="container">
+    <div class="row">
+    <div class="col-lg-5 aboutsection">
+        <p class="smallhead">Popular Countries</p>
+        <h2 class="service">SELECT YOUR FVOURITE COUNTRY TO
+            APPLY VISA
+        </h2>
+        <p class="magic">Experience the magic of your favourite Country's ancient history and modern marvels.
+            Your visa application is the gateway to a world of discovery.</p>
+    </div>
+    <div class="col-lg-7 owls">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="images1">
+                    <div class="img1">
+
+                    </div>
+                </div>
+                <p class="count">Canada</p>
+                <h4>Canada: Beauty, diversity, opportunity. Visa assistance available.</h4>
+                <button class="canada">Read More</button>
+            </div>
+            <div class="item">
+                <div class="images1">
+                    <div class="img2">
+                        
+                    </div>
+                </div>
+                <p class="count">Usa</p>
+                <h4>USA: A diverse,influential 50-states nation . Visa assistance available.</h4>
+                <button class="canada">Read More</button>
+            </div>
+            <div class="item">
+             <div class="images1">
+                <div class="img3">
+                        
+                </div>
+             </div>
+             <p class="count">Australia</p>
+             <h4>Australia: A land of natural wonders and cultural diversity. Visa assistance available.</h4>
+             <button class="canada">Read More</button>
+
+            </div>
+            <div class="item">
+                <div class="images1">
+                    <div class="img4">
+                        
+                    </div>
+                </div>
+                <p class="count">Uk</p>
+                <h4>UK: A country of rich history,influentiation and culture. Visa assistance available.</h4>
+                <button class="canada">Read More</button>
+            </div>
+            <div class="item">
+                <div class="images1">
+                    <div class="img5">
+                        
+                    </div>
+                </div>
+                <p class="count">Germany</p>
+                <h4>Germany: A historic,innovative European nation. Visa assistance available</h4>
+                <button class="canada">Read More</button>
+            </div>
+            <div class="item">
+                <div class="images1">
+                    <div class="img6">
+                        
+                    </div>
+                </div>
+                <p class="count">Malta</p>
+                <h4>Malta: A small island nation,rich history,in Mediterranean. Visa assistance avaliable </h4>
+                <button class="canada">Read More</button>
+            </div>
+            <div class="item">
+                <div class="images1">
+                    <div class="img7">
+                        
+                    </div>
+                </div>
+                <p class="count">Russia</p>
+                <h4>Russia: A vast, diverse eurasian nation with a rich history. Visa assistance available</h4>
+                <button class="canada">Read More</button>
+            </div>
+            <div class="item">
+                <div class="images1">
+                    <div class="img8">
+                        
+                    </div>
+                </div>
+                <p class="count">Cyprus</p>
+                <h4>Cyprus: A Mediterranean island known for stunning landscapes. Visa assistance avaliable </h4>
+                <button class="canada">Read More</button>
+            </div>
+            <div class="item">
+                <div class="images1">
+                    <div class="img9">
+                        
+                    </div>
+                </div>
+                <p class="count">Singapore</p>
+                <h4>Singapore: A highly developed island nation in southeast asia. Visa assistance avaliable</h4>
+                <button class="canada">Read More</button>
+            </div>
+            <div class="item">
+                <div class="images1">
+                    <div class="img10">
+                        
+                    </div>
+                </div>
+                <p class="count">Mauritius</p>
+                <h4>Mauritius: A small island nation in the indian ocean. Visa assistance avaliable</h4>
+                <button class="canada">Read More</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+<style>
+
+/* success story */
+
+
+.we-areglobal{
+    top: 30%;
+    position: sticky;
+    padding-bottom: 50%;
+}
+
+
+
+.block1 {
+    padding: 10px;
+}
+
+.block2 {
+    padding: 10px;
+}
+
+.pictures {
+    display: flex;
+
+    /* justify-content: space-between; */
+
+}
+
+.services{
+    padding: 100px 0px; 
+    text-align: center; 
+    font-size: 70px; 
+    font-weight: 900; 
+    word-spacing: 10px;
+    color: #2f7096;
+}
+
+.pic1, .pic2, .pic3, .pic4, .pic5, .pic6{
+    margin-bottom: 15px;
+}
+
+
+.pic1 {
+    /* background-position: center; */
+    height: 300px;
+    width: 100%;
+    background-image: url(https://wisdom-overseas.com/wp-content/uploads/2024/01/2.webp);
+    background-size: cover;
+    
+}
+
+.pic2 {
+    height: 300px;
+    width: 100%;
+    background-image: url(https://wisdom-overseas.com/wp-content/uploads/2024/01/wisdom-overseas-success-stories.jpg);
+    background-size: cover;
+    
+}
+
+.pic3 {
+    height: 300px;
+    width: 100%; 
+    background-image: url(https://wisdom-overseas.com/wp-content/uploads/2024/01/1.webp);
+    background-size: cover;
+}
+.pic4 {
+    height: 300px;
+    width: 100%;
+    background-image: url(https://wisdom-overseas.com/wp-content/uploads/2024/01/5.jpg);
+    background-size: cover;
+   
+}
+
+.pic5{
+    height: 300px;
+    width:100%;
+    background-image:url(https://wisdom-overseas.com/wp-content/uploads/2024/01/6.jpg) ;
+    background-size: cover;
+ 
+    
+}
+.pic6{
+    height: 300px;
+    width:100%;
+    background-image:url(https://wisdom-overseas.com/wp-content/uploads/2024/01/3.webp);
+    background-size: cover;
+}
+
+
+</style>
+
+
+<!-- success story -->
+ <div class="container-fluid cntainer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 content aboutsection">
+                <div class="we-areglobal">
+                    <p class="smallhead">Global Partners</p>
+                    <h2 class="service">WE'RE GLOBAL PARTNERS OF 580+ UNIVERSITIES</h2>
+                    <p>With Wisdom Overseas, you’re not just a traveler; you’re part of a global community. Our partners around the world are here to ensure that your journey is smooth, successful, and memorable.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-3 col-2">
+                    <h2 class="services">OUR SUCCESS <br> STORIES</h2>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-9 col-10">
+                <div class="col-lg-12 col-md-12 col-12 block1">
+                    <div class="pic1"></div>
+                    <div class="pic2"></div>
+                    <div class="pic3"></div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-12 block2">
+                    <div class="pic4"></div>
+                    <div class="pic5"></div>
+                    <div class="pic6"></div>
+                 </div>
+                </div>
+                </div>
+            </div>
+    
+    
+        </div>
+    </div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    /* testimonial part */
+    
+/* @import url(//cdn.rawgit.com/rtaibah/dubai-font-cdn/master/dubai-font.css); */
+
+
+
+
+.testim .wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1020px;
+    padding: 40px 20px;
+    margin: auto;
+}
+
+/* .testim .arrow {
+    display: block;
+    position: absolute;
+    color: #eee;
+    cursor: pointer;
+    font-size: 2em;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+    -webkit-transition: all .3s ease-in-out;    
+    -ms-transition: all .3s ease-in-out;    
+    -moz-transition: all .3s ease-in-out;    
+    -o-transition: all .3s ease-in-out;    
+    transition: all .3s ease-in-out;
+    padding: 5px;
+    z-index: 22222222;
+}
+
+.testim .arrow:before {
+		cursor: pointer;
+} 
+
+ .testim .arrow:hover {
+    color: #ea830e;
+}
+     
+
+ .testim .arrow.left {
+    left: 10px;
+}
+
+.testim .arrow.right {
+    right: 10px;
+} */
+
+.testim .dots {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 60px;
+    left: 0;
+    display: block;
+    z-index: 3333;
+		height: 12px;
+}
+
+.testim .dots .dot {
+    list-style-type: none;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    margin: 0 10px;
+    cursor: pointer;
+    -webkit-transition: all .5s ease-in-out;    
+    -ms-transition: all .5s ease-in-out;    
+    -moz-transition: all .5s ease-in-out;    
+    -o-transition: all .5s ease-in-out;    
+    transition: all .5s ease-in-out;
+		position: relative;
+}
+
+.testim .dots .dot.active,
+.testim .dots .dot:hover {
+    background: #ea830e;
+    border-color: #ea830e;
+}
+
+.testim .dots .dot.active {
+    -webkit-animation: testim-scale .5s ease-in-out forwards;   
+    -moz-animation: testim-scale .5s ease-in-out forwards;   
+    -ms-animation: testim-scale .5s ease-in-out forwards;   
+    -o-animation: testim-scale .5s ease-in-out forwards;   
+    animation: testim-scale .5s ease-in-out forwards;   
+}
+    
+.testim .cont {
+    position: relative;
+		overflow: hidden;
+}
+
+.testim .cont > div {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 0 0px 0;
+    opacity: 0;
+}
+
+.testim .cont > div.inactive {
+    opacity: 1;
+}
+.testim .cont > div.active {
+    position: relative;
+    opacity: 1;
+}
+.dots{
+    visibility: hidden;
+}
+
+.cont p{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.203);
+    padding-bottom: 30px;
+
+}
+.cont img{
+    margin-top: 30px;
+}
+
+
+.testim .cont div .img img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+.testim .cont div h2 {
+    color: #ea830e;
+    font-size: 1em;
+    margin: 15px 0;
+    text-align: left;
+} 
+
+.testim .cont div p {
+    font-size: 1.4em;
+    color:rgba(0, 0, 0, 0.599);
+    width: 80%;
+    text-align: left;
+}
+
+.testim .cont div.active .img img {
+    -webkit-animation: testim-show .5s ease-in-out forwards;            
+    -moz-animation: testim-show .5s ease-in-out forwards;            
+    -ms-animation: testim-show .5s ease-in-out forwards;            
+    -o-animation: testim-show .5s ease-in-out forwards;            
+    animation: testim-show .5s ease-in-out forwards;            
+}
+
+.testim .cont div.active h2 {
+    -webkit-animation: testim-content-in .4s ease-in-out forwards;    
+    -moz-animation: testim-content-in .4s ease-in-out forwards;    
+    -ms-animation: testim-content-in .4s ease-in-out forwards;    
+    -o-animation: testim-content-in .4s ease-in-out forwards;    
+    animation: testim-content-in .4s ease-in-out forwards;    
+}
+
+.testim .cont div.active p {
+    -webkit-animation: testim-content-in .5s ease-in-out forwards;    
+    -moz-animation: testim-content-in .5s ease-in-out forwards;    
+    -ms-animation: testim-content-in .5s ease-in-out forwards;    
+    -o-animation: testim-content-in .5s ease-in-out forwards;    
+    animation: testim-content-in .5s ease-in-out forwards;    
+}
+
+.testim .cont div.inactive .img img {
+    -webkit-animation: testim-hide .5s ease-in-out forwards;            
+    -moz-animation: testim-hide .5s ease-in-out forwards;            
+    -ms-animation: testim-hide .5s ease-in-out forwards;            
+    -o-animation: testim-hide .5s ease-in-out forwards;            
+    animation: testim-hide .5s ease-in-out forwards;            
+}
+
+.testim .cont div.inactive h2 {
+    -webkit-animation: testim-content-out .4s ease-in-out forwards;        
+    -moz-animation: testim-content-out .4s ease-in-out forwards;        
+    -ms-animation: testim-content-out .4s ease-in-out forwards;        
+    -o-animation: testim-content-out .4s ease-in-out forwards;        
+    animation: testim-content-out .4s ease-in-out forwards;        
+}
+
+.testim .cont div.inactive p {
+    -webkit-animation: testim-content-out .5s ease-in-out forwards;    
+    -moz-animation: testim-content-out .5s ease-in-out forwards;    
+    -ms-animation: testim-content-out .5s ease-in-out forwards;    
+    -o-animation: testim-content-out .5s ease-in-out forwards;    
+    animation: testim-content-out .5s ease-in-out forwards;    
+}
+
+@-webkit-keyframes testim-scale {
+    0% {
+        -webkit-box-shadow: 0px 0px 0px 0px #eee;
+        box-shadow: 0px 0px 0px 0px #eee;
+    }
+
+    35% {
+        -webkit-box-shadow: 0px 0px 10px 5px #eee;        
+        box-shadow: 0px 0px 10px 5px #eee;        
+    }
+
+    70% {
+        -webkit-box-shadow: 0px 0px 10px 5px #ea830e;        
+        box-shadow: 0px 0px 10px 5px #ea830e;        
+    }
+
+    100% {
+        -webkit-box-shadow: 0px 0px 0px 0px #ea830e;        
+        box-shadow: 0px 0px 0px 0px #ea830e;        
+    }
+}
+
+@-moz-keyframes testim-scale {
+    0% {
+        -moz-box-shadow: 0px 0px 0px 0px #eee;
+        box-shadow: 0px 0px 0px 0px #eee;
+    }
+
+    35% {
+        -moz-box-shadow: 0px 0px 10px 5px #eee;        
+        box-shadow: 0px 0px 10px 5px #eee;        
+    }
+
+    70% {
+        -moz-box-shadow: 0px 0px 10px 5px #ea830e;        
+        box-shadow: 0px 0px 10px 5px #ea830e;        
+    }
+
+    100% {
+        -moz-box-shadow: 0px 0px 0px 0px #ea830e;        
+        box-shadow: 0px 0px 0px 0px #ea830e;        
+    }
+}
+
+@-ms-keyframes testim-scale {
+    0% {
+        -ms-box-shadow: 0px 0px 0px 0px #eee;
+        box-shadow: 0px 0px 0px 0px #eee;
+    }
+
+    35% {
+        -ms-box-shadow: 0px 0px 10px 5px #eee;        
+        box-shadow: 0px 0px 10px 5px #eee;        
+    }
+
+    70% {
+        -ms-box-shadow: 0px 0px 10px 5px #ea830e;        
+        box-shadow: 0px 0px 10px 5px #ea830e;        
+    }
+
+    100% {
+        -ms-box-shadow: 0px 0px 0px 0px #ea830e;        
+        box-shadow: 0px 0px 0px 0px #ea830e;        
+    }
+}
+
+@-o-keyframes testim-scale {
+    0% {
+        -o-box-shadow: 0px 0px 0px 0px #eee;
+        box-shadow: 0px 0px 0px 0px #eee;
+    }
+
+    35% {
+        -o-box-shadow: 0px 0px 10px 5px #eee;        
+        box-shadow: 0px 0px 10px 5px #eee;        
+    }
+
+    70% {
+        -o-box-shadow: 0px 0px 10px 5px #ea830e;        
+        box-shadow: 0px 0px 10px 5px #ea830e;        
+    }
+
+    100% {
+        -o-box-shadow: 0px 0px 0px 0px #ea830e;        
+        box-shadow: 0px 0px 0px 0px #ea830e;        
+    }
+}
+
+@keyframes testim-scale {
+    0% {
+        box-shadow: 0px 0px 0px 0px #eee;
+    }
+
+    35% {
+        box-shadow: 0px 0px 10px 5px #eee;        
+    }
+
+    70% {
+        box-shadow: 0px 0px 10px 5px #ea830e;        
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 0px #ea830e;        
+    }
+}
+
+@-webkit-keyframes testim-content-in {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);        
+        transform: translateY(0);        
+    }
+}
+
+@-moz-keyframes testim-content-in {
+    from {
+        opacity: 0;
+        -moz-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    
+    to {
+        opacity: 1;
+        -moz-transform: translateY(0);        
+        transform: translateY(0);        
+    }
+}
+
+@-ms-keyframes testim-content-in {
+    from {
+        opacity: 0;
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    
+    to {
+        opacity: 1;
+        -ms-transform: translateY(0);        
+        transform: translateY(0);        
+    }
+}
+
+@-o-keyframes testim-content-in {
+    from {
+        opacity: 0;
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    
+    to {
+        opacity: 1;
+        -o-transform: translateY(0);        
+        transform: translateY(0);        
+    }
+}
+
+@keyframes testim-content-in {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0);        
+    }
+}
+
+@-webkit-keyframes testim-content-out {
+    from {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    
+    to {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);        
+        transform: translateY(-100%);        
+    }
+}
+
+@-moz-keyframes testim-content-out {
+    from {
+        opacity: 1;
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+    
+    to {
+        opacity: 0;
+        -moz-transform: translateY(-100%);        
+        transform: translateY(-100%);        
+    }
+}
+
+@-ms-keyframes testim-content-out {
+    from {
+        opacity: 1;
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    
+    to {
+        opacity: 0;
+        -ms-transform: translateY(-100%);        
+        transform: translateY(-100%);        
+    }
+}
+
+@-o-keyframes testim-content-out {
+    from {
+        opacity: 1;
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+    
+    to {
+        opacity: 0;
+        transform: translateY(-100%);        
+        transform: translateY(-100%);        
+    }
+}
+
+@keyframes testim-content-out {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    to {
+        opacity: 0;
+        transform: translateY(-100%);        
+    }
+}
+
+@-webkit-keyframes testim-show {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);       
+        transform: scale(1);       
+    }
+}
+
+@-moz-keyframes testim-show {
+    from {
+        opacity: 0;
+        -moz-transform: scale(0);
+        transform: scale(0);
+    }
+    
+    to {
+        opacity: 1;
+        -moz-transform: scale(1);       
+        transform: scale(1);       
+    }
+}
+
+@-ms-keyframes testim-show {
+    from {
+        opacity: 0;
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+    
+    to {
+        opacity: 1;
+        -ms-transform: scale(1);       
+        transform: scale(1);       
+    }
+}
+
+@-o-keyframes testim-show {
+    from {
+        opacity: 0;
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+    
+    to {
+        opacity: 1;
+        -o-transform: scale(1);       
+        transform: scale(1);       
+    }
+}
+
+@keyframes testim-show {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    
+    to {
+        opacity: 1;
+        transform: scale(1);       
+    }
+}
+
+@-webkit-keyframes testim-hide {
+    from {
+        opacity: 1;
+        -webkit-transform: scale(1);       
+        transform: scale(1);       
+    }
+    
+    to {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}
+
+@-moz-keyframes testim-hide {
+    from {
+        opacity: 1;
+        -moz-transform: scale(1);       
+        transform: scale(1);       
+    }
+    
+    to {
+        opacity: 0;
+        -moz-transform: scale(0);
+        transform: scale(0);
+    }
+}
+
+@-ms-keyframes testim-hide {
+    from {
+        opacity: 1;
+        -ms-transform: scale(1);       
+        transform: scale(1);       
+    }
+    
+    to {
+        opacity: 0;
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+}
+
+@-o-keyframes testim-hide {
+    from {
+        opacity: 1;
+        -o-transform: scale(1);       
+        transform: scale(1);       
+    }
+    
+    to {
+        opacity: 0;
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+}
+
+@keyframes testim-hide {
+    from {
+        opacity: 1;
+        transform: scale(1);       
+    }
+    
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@media all and (max-width: 300px) {
+	body {
+		font-size: 14px;
+	}
+}
+
+@media all and (max-width: 500px) {
+	.testim .arrow {
+		font-size: 1.5em;
+	}
+	
+	.testim .cont div p {
+		line-height: 25px;
+	}
+
+}
+.bars{
+    text-align:center;    
+}
+.img2{
+    background-image: url(https://img.freepik.com/free-vector/organic-flat-design-feedback-concept_23-2148943568.jpg?t=st=1721759463~exp=1721763063~hmac=5785f67307edfed18269ff9cbef1c9eb667e36b654f03ec97b93be0d4b6a3c77&w=740);
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+.fa-chevron-left{
+    background-color: #000000;
+    padding: 20px 20px;
+
+}
+.fa-chevron-right{
+    background-color: #000000;
+    padding: 20px 20px;
+
+}
+
+</style>
+
+
+<!-- testimonial part -->
+
+<div class="container testimonal cntainer">
+    <div class="col-lg-6 col-md-6 col-sm-12 aboutsection">
+        <p class="smallhead">Testimonials</p>
+        <h2 class="service">WHAT CLIENTS SAY ABOUT US AND OUR SERVICES</h2>
+        <p>Clients praise Wisdom Overseas for our exceptional guidance, personalized support, and extensive knowledge. Their positive feedback highlights our commitment to excellence and smooth visa applications.</p>
+    </div>
+    <div class="row">
+        <div class="col-lg-9 testi1">
+            <section id="testim" class="testim">
+                <div class="wrap">
+
+
+                    <ul id="testim-dots" class="dots">
+                        <li class="dot active"></li><!--
+                        --><li class="dot"></li><!--
+                        --><li class="dot"></li><!--
+                        --><li class="dot"></li><!--
+                        --><li class="dot"></li>
+                    </ul>
+                    <div id="testim-content" class="cont">
+                        
+                        <div class="active">
+                            <h2>Prince</h2>
+                            <p>Choosing Wisdom Overseas was the best decision of my immigration processes.
+                               Their experties and personalized approach made the entire journey stress-free. 
+                               I highly recommend seeking visa and immigration services.
+                            </p>
+                            <div class="img"><img src="https://wisdom-overseas.com/wp-content/uploads/2022/01/ts-2.png" alt="prince"></div>
+
+                        </div>
+    
+                        <div>
+                            <h2>Ravinder</h2>
+                            <p>I am immensely greatful to Wisdom Overseas for their outstanding support during my
+                               visa application.Their 10 years of experience truly shine through in their professionalism
+                               and attention to deatil.Highly Recommended.
+                            </p>
+                            <div class="img"><img src="https://wisdom-overseas.com/wp-content/uploads/2022/01/ts-2.png" alt="ravinder"></div>
+
+                        </div>
+    
+                        <div>
+
+                            <h2>Sachin</h2>
+                            <p>Wisdom Overseas stands out as the best in visa and immigration services. Their experience
+                               team guided me through every aspect of the  process, ensuring a successful outcome trustworthy 
+                               ,professional and simply the best.
+                            </p>  
+                            <div class="img"><img src="https://wisdom-overseas.com/wp-content/uploads/2024/01/PRIME_ESTATES__11_-removebg-preview__1_-removebg-preview.png" alt="sachin"></div>                  
+                        </div>
+    
+                        <div>
+                            <h2>Samridi</h2>
+                            <p>I am grateful to visit Wisdom Overseas for turning what seemed like a daunting  process into a 
+                                smooth and efficient experience.Their expertise and personalized service may them stand out as 
+                                leaders in the field of visa.
+                            </p>
+                            <div class="img"><img src="https://wisdom-overseas.com/wp-content/uploads/2024/01/PRIME_ESTATES__12_-removebg-preview-removebg-preview.png" alt="samridi"></div>
+
+                        </div>
+    
+                        <div>
+                            <h2>Rohit Kumar</h2>
+                            <p>I can't thank you Wisdom Overseas enough for the excellent assistance in my visa application.
+                                Their commitment to provide the best- in- case services is evident in every step of process.
+                                Highly recommended this platform.
+                            </p> 
+                            <div class="img"><img src="https://wisdom-overseas.com/wp-content/uploads/2022/01/ts-1.png" alt="rohit kumar"></div>
+                   
+                        </div>
+                        
+                    </div>
+                    
+    
+                </div>
+                <div class="bars" >
+                    <span id="left-arrow" class="arrow left fa fa-chevron-left " style="color: white;"></span>
+                    <span id="right-arrow" class="arrow right fa fa-chevron-right" style="color: white;"></span>
+                </div>
+            </section>
+
+        </div>
+        <div class="col-lg-3 testi2" >
+            <div class="img2"></div>
+         
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<style>
+    @media (max-width: 990px){
+            p{
+                font-size: 14px;
+            }
+            .logo img{
+                height: 50px;
+            }
+            .icons .fa-bars {
+                font-size: 20px;
+                padding-left: 50px;
+            }
+            .detail h1{
+                font-size: 40px;
+            }
+            .detail p {
+                font-size: 18px;
+            }
+            .aboutss{
+                height: 250px;
+            }
+            .textcircle{
+                height: 180px;
+                width: 180px;
+            }
+            .totals{
+                font-size: 25px;
+            }
+            .mission-vision{
+                padding: 0px 60px 60px 60px;
+            }
+            .services{ 
+                font-size: 50px; 
+                padding: 70px 0px; 
+            }
+            .owls{
+                padding-top: 0px;
+            }
+        }
+    @media (max-width: 768px){
+        .we-areglobal{
+            position: static;
+            padding-bottom: 0px;
+        }
+        .services{
+            font-size: 40px;
+            font-weight: 700;
+            position: sticky;
+            top: 30%;
+        }
+        .services{ 
+                font-size: 60px; 
+                padding: 70px 0px; 
+            }
+    }
+
+    @media(max-width: 700px){
+        .navlinks{
+            display: none;
+        }
+        .aboutsection{
+            padding: 100px 20px 50px 20px;
+        }
+        .cntainer{
+            padding: 0px 0px 0px 0px;
+        }
+        .textcircle{
+            height: 150px;
+            width: 150px;
+        }
+        .totals{
+            font-size: 18px;
+        }
+        .owls{
+                padding-bottom: 60px;
+            }
+    }    
+
+    @media (max-width: 650px){
+        p{
+            font-size: 12px;
+        }
+        .icons .fa-bars {
+            font-size: 20px;
+            padding-left: 30px;
+        }
+        .logo img{
+                height: 40px;
+        }
+        .icons p{
+            text-align: right;
+        }
+        .detail h1{
+                font-size: 35px;
+        }
+        .detail p {
+            font-size: 17px;
+        }
+        .detail{
+            margin: 40px;
+            padding: 20px;
+        }
+        .services{ 
+                font-size: 40px; 
+                padding: 70px 0px; 
+            }
+    }
+</style>
+
+
+
+
+
+<script src="https://use.fontawesome.com/1744f3f671.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>   
+    <script>
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:2
+        }
+    }
+})
+
+
+
+
+
+
+
+
+var	testim = document.getElementById("testim"),
+testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
+testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
+testimLeftArrow = document.getElementById("left-arrow"),
+testimRightArrow = document.getElementById("right-arrow"),
+testimSpeed = 4500,
+currentSlide = 0,
+currentActive = 0,
+testimTimer,
+touchStartPos,
+touchEndPos,
+touchPosDiff,
+ignoreTouch = 30;
+;
+
+window.onload = function() {
+
+// Testim Script
+function playSlide(slide) {
+for (var k = 0; k < testimDots.length; k++) {
+    testimContent[k].classList.remove("active");
+    testimContent[k].classList.remove("inactive");
+    testimDots[k].classList.remove("active");
+}
+
+if (slide < 0) {
+    slide = currentSlide = testimContent.length-1;
+}
+
+if (slide > testimContent.length - 1) {
+    slide = currentSlide = 0;
+}
+
+if (currentActive != currentSlide) {
+    testimContent[currentActive].classList.add("inactive");            
+}
+testimContent[slide].classList.add("active");
+testimDots[slide].classList.add("active");
+
+currentActive = currentSlide;
+
+clearTimeout(testimTimer);
+testimTimer = setTimeout(function() {
+    playSlide(currentSlide += 1);
+}, testimSpeed)
+}
+
+testimLeftArrow.addEventListener("click", function() {
+playSlide(currentSlide -= 1);
+})
+
+testimRightArrow.addEventListener("click", function() {
+playSlide(currentSlide += 1);
+})    
+
+for (var l = 0; l < testimDots.length; l++) {
+testimDots[l].addEventListener("click", function() {
+    playSlide(currentSlide = testimDots.indexOf(this));
+})
+}
+
+playSlide(currentSlide);
+
+// keyboard shortcuts
+document.addEventListener("keyup", function(e) {
+switch (e.keyCode) {
+    case 37:
+        testimLeftArrow.click();
+        break;
+        
+    case 39:
+        testimRightArrow.click();
+        break;
+
+    case 39:
+        testimRightArrow.click();
+        break;
+
+    default:
+        break;
+}
+})
+
+testim.addEventListener("touchstart", function(e) {
+        touchStartPos = e.changedTouches[0].clientX;
+})
+
+testim.addEventListener("touchend", function(e) {
+        touchEndPos = e.changedTouches[0].clientX;
+    
+        touchPosDiff = touchStartPos - touchEndPos;
+    
+        console.log(touchPosDiff);
+        console.log(touchStartPos);	
+        console.log(touchEndPos);	
+
+    
+        if (touchPosDiff > 0 + ignoreTouch) {
+                testimLeftArrow.click();
+        } else if (touchPosDiff < 0 - ignoreTouch) {
+                testimRightArrow.click();
+        } else {
+            return;
+        }
+    
+})
+}
+    </script>
+
+</body>
+
+</html>
