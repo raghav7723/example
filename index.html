@@ -2338,6 +2338,9 @@ p{
         .services{ 
                 font-size: 60px; 
                 padding: 70px 0px; 
+                -webkit-text-stroke-color: #2f7096eb;
+                -webkit-text-fill-color: rgba(255, 255, 255, 0);
+                -webkit-text-stroke-width: 2px;
             }
     }
 
@@ -2388,9 +2391,26 @@ p{
             padding: 20px;
         }
         .services{ 
-                font-size: 40px; 
-                padding: 70px 0px; 
-            }
+            font-size: 55px; 
+            padding: 70px 0px; 
+            -webkit-text-stroke-color: #2f7096eb;
+            -webkit-text-fill-color: rgba(255, 255, 255, 0);
+            -webkit-text-stroke-width: 2px;
+        }
+        .pic1, .pic2, .pic3, .pic4, .pic5, .pic6{
+            background-position: -90px -10px;
+            background-repeat: no-repeat;
+
+        }
+        .bread::before, .bigimg::before{
+            content: "";
+            background-attachment: scroll;
+        }
+
+        .mission-vision{
+            padding: 0px 10px 60px 10px;
+        }
+
     }
 </style>
 
