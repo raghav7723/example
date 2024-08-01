@@ -783,7 +783,7 @@ p{
                 </div>
             </div>
             <div class="row">
-            <div class="col-lg-3 col-md-6 aboutss">
+            <div class="col-lg-3 col-md-6 col-6 aboutss">
                 <div class="image1">
                     <div class="textss">
                         <h3>Student Visa</h3>
@@ -796,7 +796,7 @@ p{
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 aboutss">
+            <div class="col-lg-3 col-md-6 col-6 aboutss">
                 <div class="image2">
                     <div class="textss">
                         <h3>Tourist Visa</h3>
@@ -809,7 +809,7 @@ p{
                     </div> 
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 aboutss">
+            <div class="col-lg-3 col-md-6 col-6 aboutss">
                 <div class="image3">
                     <div class="textss">
                         <h3>Spouse Visa</h3>
@@ -822,7 +822,7 @@ p{
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 aboutss">
+            <div class="col-lg-3 col-md-6 col-6 aboutss">
                 <div class="image4">
                     <div class="textss">
                         <h3>Visitor Visa</h3>
@@ -2193,13 +2193,17 @@ p{
 <!-- testimonial part -->
 
 <div class="container testimonal cntainer">
-    <div class="col-lg-6 col-md-6 col-sm-12 aboutsection">
-        <p class="smallhead">Testimonials</p>
-        <h2 class="service">WHAT CLIENTS SAY ABOUT US AND OUR SERVICES</h2>
-        <p>Clients praise Wisdom Overseas for our exceptional guidance, personalized support, and extensive knowledge. Their positive feedback highlights our commitment to excellence and smooth visa applications.</p>
-    </div>
     <div class="row">
-        <div class="col-lg-9 testi1">
+        <div class="col-lg-6 col-md-6 col-sm-12 aboutsection">
+            <p class="smallhead">Testimonials</p>
+            <h2 class="service">WHAT CLIENTS SAY ABOUT US AND OUR SERVICES</h2>
+            <p>Clients praise Wisdom Overseas for our exceptional guidance, personalized support, and extensive knowledge. Their positive feedback highlights our commitment to excellence and smooth visa applications.</p>
+            <div class="bars" >
+                <span id="left-arrow" class="arrow left fa fa-chevron-left " style="color: white;"></span>
+                <span id="right-arrow" class="arrow right fa fa-chevron-right" style="color: white;"></span>
+            </div>
+        </div>
+        <div class="col-lg-6 testi1" style="border: 1px solid black;">
             <section id="testim" class="testim">
                 <div class="wrap">
 
@@ -2267,17 +2271,14 @@ p{
                     
     
                 </div>
-                <div class="bars" >
-                    <span id="left-arrow" class="arrow left fa fa-chevron-left " style="color: white;"></span>
-                    <span id="right-arrow" class="arrow right fa fa-chevron-right" style="color: white;"></span>
-                </div>
+                
             </section>
 
         </div>
-        <div class="col-lg-3 testi2" >
+        <!-- <div class="col-lg-3 testi2" >
             <div class="img2"></div>
          
-        </div>
+        </div> -->
     </div>
 </div>
 
@@ -2348,6 +2349,9 @@ p{
         .navlinks{
             display: none;
         }
+        h3{
+            font-size: 28px;
+        }
         .aboutsection{
             padding: 100px 20px 50px 20px;
         }
@@ -2362,13 +2366,22 @@ p{
             font-size: 18px;
         }
         .owls{
-                padding-bottom: 60px;
-            }
+            padding-bottom: 60px;
+        }
+        .testim .cont div p {
+            font-size: 1.2em;
+            color: rgba(0, 0, 0, 0.599);
+            width: 80%;
+            text-align: left;
+}
     }    
 
     @media (max-width: 650px){
         p{
             font-size: 12px;
+        }
+        h3{
+            font-size: 25px;
         }
         .icons .fa-bars {
             font-size: 20px;
@@ -2402,6 +2415,10 @@ p{
             background-repeat: no-repeat;
 
         }
+        .textcircle{
+            height: 120px;
+            width: 120px;
+        }
         .bread::before, .bigimg::before{
             content: "";
             background-attachment: scroll;
@@ -2409,6 +2426,21 @@ p{
 
         .mission-vision{
             padding: 0px 10px 60px 10px;
+        }
+        .testim .wrap{
+            padding: 0px 10px 60px 10px;
+        }
+        .testim .cont div h2{
+            text-align: center;
+        }    
+        .testim .cont div p {
+            text-align: center;
+            font-size: 1em;
+            color: rgba(0, 0, 0, 1);
+            width: 100%;
+        }
+        .testim .cont div .img img{
+            display: inline;
         }
 
     }
